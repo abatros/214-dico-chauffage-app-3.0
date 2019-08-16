@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<title>dico-chauffage-3.0</title>
+
+<!--
+<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic'
+  rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Tinos' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Lato:400,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
+
+<link href="https://fonts.googleapis.com/css?family=Galdeano" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica" rel="stylesheet">
+
+-->
+
+<link href="https://fonts.googleapis.com/css?family=IM+Fell+DW+Pica+SC" rel="stylesheet">
+<link href='https://fonts.googleapis.com/css?family=Lato:400,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+<script
+			  src="https://code.jquery.com/jquery-3.2.1.min.js"
+			  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+			  crossorigin="anonymous">
+</script>
+
+<!--
+<script src="//www.jsviews.com/download/jsview.min.js"></script>
+
+<script src="//www.jsviews.com/download/jsviews.js"></script>
+<script src="//www.jsviews.com/download/jsrender.min.js"></script>
+<script src="//www.jsviews.com/download/jquery.observable.min.js"></script>
+<script src="//www.jsviews.com/download/jquery.views.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jsviews/0.9.90/jsviews.min.js"></script>
+-->
+
+<body>
+{{:html}}
+</body>
+</html>

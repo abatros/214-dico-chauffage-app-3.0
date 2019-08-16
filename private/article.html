@@ -1,0 +1,183 @@
+{{{doctype}}}
+<html>
+<head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-78727017-4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-78727017-4');
+  </script>
+
+
+<title>{{row.h1}}</title>
+<meta charset="utf-8">
+<meta content="text/html" http-equiv="Content-Type">
+<meta name="keywords"
+    content="museum, chauffage, encyclopedia, catalog, thermostat, antique
+    {{#if row.vr}}
+      , {{row.vr}}
+    {{/if}}
+
+    {{#each it in row.va}}
+      , {{it}}
+    {{/each}}
+
+    {{#each it in row.au}}
+      , {{it}}
+    {{/each}}
+    ">
+
+<meta name="google-site-verification" content="9azUpBj4YRYKPyl-AlAl_zJEtKUuUegqIR5EeUe45Xs" />
+
+<meta name="description"
+    content="Musée Ultimheat Anciens Appareils de Chauffage et de Cuisson - {{row.h1}}
+    {{#if row.vr}}
+      - {{row.vr}}
+    {{/if}}
+
+    {{#each it in row.va}}
+      - {{it}}
+    {{/each}}
+
+    {{#each it in row.au}}
+      - {{it}}
+    {{/each}}
+    ">
+
+
+<style type="text/css">
+    @import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+    @import url("https://fonts.googleapis.com/css?family=Oswald:600:300");
+
+    a, a:visited, a:hover, a:active {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    body {
+      background-color:rgb(120,120,120);
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+</style>
+
+
+<style>
+
+  blockquote {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 24px;
+    -webkit-margin-end: 24px;
+    margin: 1em 24px;
+  }
+
+  blockquote p {
+    font-size: 12pt;
+    line-height: 16pt;
+    font-style: italic;
+    font-family: 'times new roman';
+    margin: 10px 20px 5px 0px;
+  }
+
+  blockquote p:before {
+    content: "\25b6\00a0";
+    margin-left: -25px;
+    color: green;
+    font-style: normal;
+    width: 25px;
+    display: inline-block;
+  }
+
+  a.refc {
+    font-style: normal;
+    color: darkgreen;
+    font-family: helvetica;
+    font-size: 10pt;
+    _white-space: nowrap;
+  }
+
+  #article h1 {
+    text-align: center;
+    line-height: 28pt;
+    font-family: lato;
+    font-size: 24pt;
+    color: rgb(126,26,26);
+  }
+
+  a.click-ici {
+    border: 1px solid black;
+    background: #e3caca;
+    padding: 2px 10px;
+    font-family: 'Oswald';
+    font-weight: 600;
+    color: white;
+  }
+  a.click-ici:hover {
+    color:black;
+  }
+</style>
+</head>
+
+
+<body>
+  <div style="position:fixed; top:0px; left:0px; width:100%; _height:60px;
+  background-color:transparent;
+
+  ">
+  <div style="width:740px; _height:50px; margin:0px auto; text-align:center;
+  background-color:rgba(240,240,200,0.9);
+  border-bottom:1px solid lightgray;
+  padding: 20px 0;
+  ">
+    <i style="color:rgb(100,100,100)">Visitez notre WebApp</i> <b>→</b>
+    <a class="click-ici" href="../">cliquer ici</a>
+  </div>
+  </div>
+
+  <div id="article" style="
+    _border:1px solid lightgray;
+    width:700px; margin: 0 auto;
+    padding:40pt 30pt;
+    font-size:12pt; line-height:17pt;
+    background-color:rgb(240,240,200);
+    font-family: lato;
+    ">
+    <h1>{{row.h1}}</h1>
+
+
+    {{#if row.vr}}
+    <p class="vr">
+      Voir : <a href="#" class="js-title" style="color:brown;"><u>{{row.vr}}</u></a>
+    </p>
+    {{/if}}
+
+    <p class="va">
+    {{#each it in row.va}}
+      {{#if @index}}, {{else}} Voir aussi : {{/if}}
+      <a href="#" class="js-title" style="color:brown;"><u>
+        {{it}}</u>
+      </a>
+    {{/each}}
+    </p>
+
+    <p class="au">
+    {{#each it in row.au}}
+      {{#if @index}}, {{else}}Aussi : {{/if}}
+      <a href="#" class="js-title" style="color:brown;"><u>
+        {{it}}</u>
+      </a>
+    {{/each}}
+    </p>
+
+
+  {{{row.html}}}
+
+
+  </div>
+</body>
+</html>

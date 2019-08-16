@@ -1,0 +1,27 @@
+<template name="topMenu">
+<div id="top-menu"
+style="display:flex; justify-content:space-between;
+padding:15px;
+"
+>
+
+<div>
+&nbsp;&nbsp;
+<button class="js-index">Retour à la sélection</button>
+&emsp;
+{{#if index}}
+<span style="font-size:9pt;">{{index.length}} articles.</span>
+{{/if}}
+</div>
+
+
+<div>
+  {{#if subIndex_count}}
+  <button class="js-prev" title="previous article">&nbsp;&lt;&lt;&nbsp;</button>
+  <span style="display:inline-block; width:50px; text-align:center;">{{cursor_info}}</span>
+  <button class="js-next" title="next article">&nbsp;&gt;&gt;&nbsp;</button>
+  {{/if}}
+</div>
+
+</div>
+</template>

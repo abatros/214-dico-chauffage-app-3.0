@@ -1,0 +1,104 @@
+<template name="article">
+  <style>
+
+
+  blockquote {
+    display: block;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 24px;
+    -webkit-margin-end: 24px;
+    margin: 1em 24px;
+  }
+
+  blockquote p {
+    font-size: 12pt;
+    line-height: 16pt;
+    font-style: italic;
+    font-family: 'times new roman';
+    margin: 10px 20px 5px 0px;
+  }
+
+  blockquote p:before {
+    content: "\25b6\00a0";
+    margin-left: -25px;
+    color: green;
+    font-style: normal;
+    width: 25px;
+    display: inline-block;
+  }
+
+  a.refc {
+    font-style: normal;
+    color: darkgreen;
+    font-family: helvetica;
+    font-size: 10pt;
+    _white-space: nowrap;
+  }
+
+  #article h1 {
+    text-align: center;
+    line-height: 28pt;
+    font-family: lato;
+    font-size: 24pt;
+    color: rgb(126,26,26);
+  }
+  </style>
+
+  <div id="article:top-menu-outer" style="position:fixed; top:0px; left:0px; width:100%; _height:60px;
+  background-color:transparent;
+
+  ">
+  <div id="article:top-menu-inner" style="width:700px; height:60px; margin:0 auto; text-align:center;
+  background-color:rgba(240,240,200,0.9);
+  border-bottom:1px solid lightgray;
+  ">
+    {{> topMenu}}
+  </div>
+  </div>
+
+  <div id="article" style="
+    _border:1px solid lightgray;
+    _max-width:700px;
+    margin:0;
+    padding:10pt 30pt;
+    font-size:12pt; line-height:17pt;
+    background-color:rgb(240,240,200);
+    font-family: lato;
+    ">
+    <h1>{{row.h1}}</h1>
+
+    <p class="au">
+    {{#each it in row.au}}
+      {{#if @index}}, {{else}}Syn.&ensp;{{/if}}
+      <a href="#" class="js-au" style="color:brown;"><u>
+        {{it}}</u>
+      </a>
+    {{/each}}
+    </p>
+
+
+    {{#if row.vr}}
+    <p class="vr">
+      Voir : <a href="#" class="js-vr" style="color:brown;"><u>{{row.vr}}</u></a>
+    </p>
+    {{/if}}
+
+    <p class="va">
+    {{#each it in row.va}}
+      {{#if @index}}, {{else}} Voir aussi : {{/if}}
+      <a href="#" class="js-va" style="color:brown;"><u>
+        {{it}}</u>
+      </a>
+    {{/each}}
+    </p>
+
+
+
+  {{{row.html}}}
+
+
+  </div>
+  {{> jpc_address}}
+
+</template>

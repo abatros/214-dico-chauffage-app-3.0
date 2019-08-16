@@ -1,0 +1,66 @@
+<template name="subIndex_panel">
+
+	<style>
+	.xe {
+		margin: 5px 0px 5px 0px;
+		text-indent: -10px;
+	}
+
+	a.js-entry {
+		color:brown;
+		font-weight:bold;
+	}
+
+
+/* 02013 ndash 02666 losange 000A0 nbsp */
+
+	.xe-au:before {content:' \02013\000A0 ';}
+	.xe-vr:before {content:' \02192\000A0 Voir:\000A0 ';}
+	.xe-va:before {content:' \02666\000A0 ';}
+
+	#subIndex-panel a {
+		text-decoration:none;
+	}
+
+	</style>
+
+	<div id="subIndex-panel"
+	style="border:0px solid green; font-size:10pt;
+	padding:10px 30px 0px 40px;
+	font-family:lato; font-size:10pt; line-height:16pt;
+	max-height:{{max_height}}
+	overflow:{{overflow}}
+	">
+
+
+		{{#each it in subIndex}}
+  	<div class="xe">
+			<b>&ndash;</b>
+<!--
+			<a href="#" class="js-entry" id="{{it.id}}">{{it.h1}}</a>
+		-->
+		<a class="js-entry" href="{{pathFor 'article' id=it.id}}">{{it.h1}}</a>
+		&ensp;
+			{{#each au in it.au}}
+			<span class="xe-au js-au">
+				{{au}}
+			</span>
+			{{/each}}
+
+		{{#if it.vr}}
+			<span class="xe-vr js-vr">
+				{{{it.vr}}}
+			</span>
+			{{/if}}
+
+			{{#each va in it.va}}
+			<span class="xe-va js-va">
+				{{va}}
+			</span>
+			{{/each}}
+
+
+	</div>
+		{{/each}}
+	</div>
+</template>

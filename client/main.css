@@ -1,0 +1,12 @@
+/* CSS declarations go here */
+
+body {
+  background-color:rgb(120,120,120);
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+div#index {
+  visibility: visible;
+}

@@ -1,0 +1,44 @@
+const pgp = require('pg-promise')({});
+const db = pgp({
+  host: 'ultimheat.com',
+  port: 5432,
+  database: 'dico-ultimheat',
+  user: 'postgres',
+  password: 'sandeep',
+});
+
+//const _select_all = "select id, headline, checksum, posted as last_updated from cc2_articles where title like 'cc3::%' order by headline";
+
+export function get_index() {
+  let etime = new Date().getTime();
+  return db.any(`
+    select id, headline, checksum, posted as last_updated
+    from cc2_articles
+    where title like 'cc3::%'
+    order by headline
+    `)
+  .then(data =>{
+    const _etime = new Date().getTime() - etime;
+    return Promise.resolve({
+      _etime: _etime,
+      rows: data
+    })
+  })
+} // get-index
+
+
+export function get_article(id) {
+  let etime = new Date().getTime();
+  return db.one(`select * from cc2_articles where id = $(id)`,{id: id})
+  .then(data =>{
+    console.log(data);
+    const _etime = new Date().getTime() - etime;
+    // const row = require('fs').readFileSync('/home/dkz/dev-utpp/dico-chauffage-app-2.9/.upload/base/Anthracite.md','utf8');
+    const row = require('fs').readFileSync('/home/dkz/dev-utpp/dico-chauffage-app-2.9/.upload/base/Fourneau.md','utf8')
+    console.log(row);
+    return {
+      _etime: _etime,
+      row:row
+    };
+  })
+} // get-article
