@@ -9,7 +9,7 @@
     "bloodhound-js": "^1.2.2",
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
-    "js-yaml": "^3.10.0",
+    "js-yaml": "^3.13.1",
     "jsrender": "^0.9.90",
     "marked": "^0.3.9",
     "meteor-node-stubs": "^0.3.2",
